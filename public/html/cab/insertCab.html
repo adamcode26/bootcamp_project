@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Cab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5">
+      <h1 class="my-5">Insert Cab</h1>
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="cab_id" class="form-label">Cab ID</label>
+            <input type="text" class="form-control" id="cab_id" name ="cab_id" placeholder="e.g. 1234" required>
+          </div>
+          <div class="col-md-4">
+            <label for="car_type" class="form-label">Car Type</label>
+            <input type="text" class="form-control" id="car_type" name="car_type" placeholder="e.g. SUV" required>
+          </div>
+          <div class="col-md-4">
+            <label for="driver_id" class="form-label">Driver ID</label>
+            <input type="text" class="form-control" name="driver_id" id="driver_id" required>
+          </div>
+          <div class="col-md-4">
+            <label for="driver_name" class="form-label">Driver Name</label>
+            <input type="text" class="form-control" name="driver_name" id="driver_name" required>
+          </div>
+          <div class="col-md-4">
+            <label for="per_km_rate" class="form-label">Rate (per K.M.)</label>
+            <input type="text" class="form-control" name="per_km_rate" id="per_km_rate" required>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" id="submit" type="submit">Submit form</button>
+          </div>
+      </form>      
+    </div>
+    <script src="../../js/cab/insertCab.js"></script>
+</body>
+</html>
