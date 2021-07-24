@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Driver</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5">
+      <h1 class="my-5">Insert Driver!</h1>
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="customer_id" class="form-label">Customer ID</label>
+            <input type="text" class="form-control" id="customer_id" name ="customer_id"  required>
+          </div>
+          <div class="col-md-3">
+            <label for="driver" class="form-label">Driver Name</label>
+            <select class="form-select" id="driver" >
+              <option selected disabled value="">Choose...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="from" class="form-label">From</label>
+            <input type="text" class="form-control" name="from" id="from" required>
+          </div>
+          <div class="col-md-4">
+            <label for="to" class="form-label">To</label>
+            <input type="text" class="form-control" name="to" id="to" required>
+          </div>
+          <div class="col-md-4">
+            <label for="from_date" class="form-label">Starting On</label>
+            <input type="date" class="form-control" name=from_date" id="from_date" required>
+          </div>
+          <div class="col-md-4">
+            <label for="to_date" class="form-label">Ending On</label>
+            <input type="date" class="form-control" name=to_date" id="to_date" required>
+          </div>
+          <div class="col-md-3">
+            <label for="distance" class="form-label">Distance (In K.M.)</label>
+            <input type="number" class="form-control" name="distance" id="distance" required>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </div>
+      </form>      
+    </div>
+    <script src="../../js/tripBooking/newTrip.js"></script>
+</body>
+</html>
