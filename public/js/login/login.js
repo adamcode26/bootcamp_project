@@ -4,11 +4,19 @@ loginButton.addEventListener("click", function(event) {
     event.preventDefault();
     const username = document.getElementById("username_field").value;
     const password = document.getElementById("password_field").value;
-
-    if (username === "user" && password === "web_dev") {
-        alert("You have successfully logged in.");
-        location.reload();
-    } else {
-        alert("Enter correect username/password")
-    }
+    obj = {}
+    obj.username = username
+    obj.password = password
+    fetch("http://localhost:8080/customer/validate",{
+        method: 'POST',
+        body: JSON.stringify(obj),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(resp => resp.json())
+        .then(data => {
+            localStorage.setItem( "id", data.cusId );
+            window.location = "http://127.0.0.1:8081/html/tripBooking/newTrip.html";
+        })
 })

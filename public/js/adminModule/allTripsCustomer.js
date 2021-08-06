@@ -1,5 +1,7 @@
+let url = "http://localhost:8080/admin/customer-trip/" + localStorage.getItem("id")
+
 var table = document.getElementById("driver_list").getElementsByTagName("tbody")[0]
-fetch("http://localhost:8080/admin/customer-trip/1",{method: 'GET'})
+fetch(url,{method: 'GET'})
         .then(resp => resp.json())
         .then(sampleData => {
             sampleData.forEach((data)=>{
@@ -7,12 +9,18 @@ fetch("http://localhost:8080/admin/customer-trip/1",{method: 'GET'})
                 var cell1 = row.insertCell()
                 cell1.innerHTML = `${data.customer.username}`
                 var cell2 = row.insertCell()
-                cell2.innerHTML = `${data.distance}`
+                cell2.innerHTML = `${data.distanceKm}`
                 var cell4 = row.insertCell()
                 cell4.innerHTML = `${data.bill}`
-               /* var cell4 = row.insertCell()
-                cell4.innerHTML = `<a href="" class="btn btn-info" id=${data.tripId} role="button">Delete</a>`*/
+                var cell5 = row.insertCell()
+                cell5.innerHTML = `${data.fromDate}`
+                var cell6 = row.insertCell()
+                cell6.innerHTML = `${data.toDate}`
+                var cell7 = row.insertCell()
+                cell7.innerHTML = `${data.fromLocation}`
+                var cell8 = row.insertCell()
+                cell8.innerHTML = `${data.toLocation}`
+
             })
-            console.log(data);
             // is to render on the dom 
         })
