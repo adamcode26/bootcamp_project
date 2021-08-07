@@ -1,4 +1,4 @@
-fetch("http://localhost:8080/cab/viewcab",{method: 'GET'})
+fetch("http://localhost:8080/cab/viewfreecab",{method: 'GET'})
         .then(resp => resp.json())
         .then(sampleData => {
             sampleData.forEach((data)=>{
