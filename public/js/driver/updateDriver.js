@@ -79,4 +79,7 @@ fetch(url,{method: 'GET'})
         alert("Record updataed sucessfully");
         window.location.reload();
     } )
+    .catch((error)=>{
+      alert("Something Went Wrong")
+  })
     }

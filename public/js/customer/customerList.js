@@ -44,4 +44,7 @@ fetch("http://localhost:8080/customer/view",{method: 'GET'})
                 alert("Record Deleted Successfully")
                 window.location.reload()
             })
+            .catch((error)=>{
+                alert("Something Went Wrong")
+            })
         }

@@ -11,7 +11,7 @@ fetch(url,{method: 'GET'})
                 var cell2 = row.insertCell()
                 cell2.innerHTML = `${data.distanceKm}`
                 var cell4 = row.insertCell()
-                cell4.innerHTML = `${data.bill}`
+                cell4.innerHTML = `${data.distanceKm*data.driver.cab.perKmRate}`
                 var cell5 = row.insertCell()
                 cell5.innerHTML = `${data.fromDate}`
                 var cell6 = row.insertCell()
@@ -23,4 +23,7 @@ fetch(url,{method: 'GET'})
 
             })
             // is to render on the dom 
+        })
+        .catch((error)=>{
+            alert("Something Went Wrong")
         })

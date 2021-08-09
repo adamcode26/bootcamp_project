@@ -1,7 +1,12 @@
 
 let sampleData
 
-fetch("http://localhost:8080/driver//getfreedriver",{method: 'GET'})
+var today = new Date().toISOString().split('T')[0]
+console.log(today)
+
+document.getElementById("from_date").setAttribute('min',today)
+
+fetch("http://localhost:8080/driver/getfreedriver",{method: 'GET'})
         .then(resp => resp.json())
         .then(sampleData => {
             sampleData.forEach((data)=>{
@@ -14,6 +19,13 @@ fetch("http://localhost:8080/driver//getfreedriver",{method: 'GET'})
             //console.log(data);
             // is to render on the dom 
         })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert("No Driver Available")
+            window.location = "http://127.0.0.1:8081/html/landingPages/customerLanding.html"
+            }
+            //window.location = "http://127.0.0.1:8081/html/landingPages/customerLanding.html"
+        )
 const submit = document.getElementById("submit")
 
 

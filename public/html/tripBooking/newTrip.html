@@ -7,13 +7,16 @@
     <title>New Trip</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
 </head>
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container p-3 mb-2 bg-secondary text-white rounded">
+      <a class="navbar-brand" href="#">Welcome To Cab Booking Application</a>
+      <a class="navbar-brand" href="http://127.0.0.1:8081/html/landingPages/customerLanding.html" >Home</a>
+  </div>
+</nav>
+
 <body>
     <div class="container my-5">
-      <div class="float-right">
-        <button class="btn btn-info" id="logout" type="submit">Logout</button>
-        <a href="http://127.0.0.1:8081/html/adminModule/allTripsCustomer.html" class="btn btn-info " role="button">All Trips</a>
-      </div>
-      
       <h1 class="my-5">New Trip</h1>
         <form class="row g-3">
           <div class="col-md-3">
@@ -32,7 +35,7 @@
           </div>
           <div class="col-md-4">
             <label for="from_date" class="form-label">Starting On</label>
-            <input type="date" class="form-control" name=from_date" id="from_date" required>
+            <input type="date" class="form-control" name=from_date" id="from_date" min="" required>
           </div>
           <div class="col-md-4">
             <label for="to_date" class="form-label">Ending On</label>

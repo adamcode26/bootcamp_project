@@ -20,3 +20,6 @@ submit.addEventListener("click", function(event){
         alert("Record Inserted Successfully"+  data);
     } )
 })
+.catch((error)=>{
+    alert("Something Went Wrong")
+})

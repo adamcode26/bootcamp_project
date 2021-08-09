@@ -17,6 +17,6 @@ loginButton.addEventListener("click", function(event) {
         .then(resp => resp.json())
         .then(data => {
             localStorage.setItem( "id", data.cusId );
-            window.location = "http://127.0.0.1:8081/html/tripBooking/newTrip.html";
+            window.location = "http://127.0.0.1:8081/html/landingPages/customerLanding.html";
         })
 })
