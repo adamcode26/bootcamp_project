@@ -17,7 +17,7 @@ submit.addEventListener("click", function(event){
         }
     }).then(resp => resp.json())
     .then(data => {
-        alert("Record Inserted Successfully"+  data);
+        alert("Record Inserted Successfully");
     } )
 })
 .catch((error)=>{
